@@ -1,0 +1,1 @@
+var moni = angular.module("moni",[]);
