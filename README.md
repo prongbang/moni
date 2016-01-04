@@ -4,6 +4,9 @@ Spring 4.0.6 Maven Project + Hibernate ORM + MySQL in Netbeans
 <h2>MySQL Connection</h2>
 moni/src/main/webapp/WEB-INF/jdbc.properties<br/>
 
+<h2>MSSQL Connection</h2>
+moni/src/main/webapp/META-INF/context.xml<br/>
+
 <h2>Script SQL</h2>
 moni/src/main/webapp/WEB-INF/sql/spring.sql<br/>
 
