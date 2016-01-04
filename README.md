@@ -7,7 +7,7 @@ moni/src/main/webapp/WEB-INF/jdbc.properties<br/>
 <h2>MSSQL Connection</h2>
 moni/src/main/webapp/META-INF/context.xml<br/>
 
-<h2>Script SQL</h2>
+<h2>MySQL Script</h2>
 moni/src/main/webapp/WEB-INF/sql/spring.sql<br/>
 
 <h2>Change package in XML</h2>
