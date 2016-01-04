@@ -19,7 +19,7 @@ public class BookDaoImpl extends AbstractDaoImpl<Book, Integer> implements BookD
     public List<Book> findLastId() throws Exception {
 
         StringBuffer sql = new StringBuffer();
-        sql.append("SELECT id FROM book order by id desc limit 1");
+        sql.append("SELECT TOP 1 id FROM book order by id desc");
         SQLQuery query = getCurrentSession().createSQLQuery(sql.toString());
         query.setResultTransformer(Transformers.aliasToBean(Book.class));
         try {

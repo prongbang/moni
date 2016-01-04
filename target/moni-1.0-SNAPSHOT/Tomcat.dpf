@@ -1,2 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Context antiJARLocking="true" path="/moni"/>
+<Context antiJARLocking="true" path="/moni">
+  <Resource auth="Container" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" maxActive="50" maxIdle="30" maxWait="10000" name="jdbc/MSSQLDB" type="javax.sql.DataSource" url="jdbc:sqlserver://localhost:1433;databaseName=spring;user=sa;password=p@ssword"/>
+</Context>
