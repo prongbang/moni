@@ -10,3 +10,6 @@ moni/src/main/webapp/WEB-INF/sql/spring.sql<br/>
 <h2>Change package in XML</h2>
 moni/src/main/webapp/WEB-INF/applicationContext.xml<br/>
 moni/src/main/webapp/WEB-INF/dispatcher-servlet.xml<br/>
+
+<h2>Add library</h2>
+moni/pom.xml<br/>
