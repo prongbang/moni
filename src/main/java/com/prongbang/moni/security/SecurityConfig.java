@@ -19,8 +19,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Autowired
     public void configAuthentication(AuthenticationManagerBuilder auth) throws Exception {
 
+        // other authen
         auth.authenticationProvider(new UserAuthenticationProvider()); 
 
+        // jdbc authen
         /*
          auth.jdbcAuthentication().dataSource(dataSource)
          .usersByUsernameQuery("select username,password, enabled from users where username=?")
@@ -33,20 +35,21 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         
         http.authorizeRequests()
+                .antMatchers("/*").permitAll()
                 .antMatchers("/login*").permitAll()
-                .antMatchers("/main*").access("isAuthenticated()")
+                .antMatchers("/home*").access("isAuthenticated()")
                 .antMatchers("/book*").access("isAuthenticated() and hasAnyRole('ADMIN', 'USER')")
                 .and()
                 .formLogin().loginPage("/login")
                 .successHandler(new UserAuthenticationSuccessHandler())
                 .failureUrl("/login?rs=error")
-                .defaultSuccessUrl("/main")
+                .defaultSuccessUrl("/home")
                 .usernameParameter("j_username")
                 .passwordParameter("j_password")
                 .and()
                 .logout().logoutSuccessUrl("/login?rs=logout").deleteCookies("JSESSIONID")
                 .and()
-                .exceptionHandling().accessDeniedPage("/error403")
+                .exceptionHandling().accessDeniedPage("/403")
                 .and()
                 .sessionManagement()
                 .invalidSessionUrl("/login?rs=expired")

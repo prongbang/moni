@@ -10,21 +10,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @author prongbang
  */
 @Controller
-@RequestMapping("/")
+@RequestMapping("/home")
 public class HomeController {
 
     @RequestMapping(method = RequestMethod.GET)
-    public String init(ModelMap model) {
-
-        return "login";
-    }
-
-    @RequestMapping(value = "/home", method = RequestMethod.GET)
-    public String home(ModelMap model) {
-
+    public String init(ModelMap model){
         model.addAttribute("message", "prongbang");
-
+        
         return "index";
     }
-
+    
 }

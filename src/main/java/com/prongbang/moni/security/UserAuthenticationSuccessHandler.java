@@ -36,7 +36,6 @@ public class UserAuthenticationSuccessHandler implements AuthenticationSuccessHa
         Authentication authen = securityContext.getAuthentication();
         
         
-        
         String targetUrl = "/home";
 
         redirectStrategy.sendRedirect(request, response, targetUrl);

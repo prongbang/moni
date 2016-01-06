@@ -30,7 +30,8 @@
     
     <!-- JNDI Datasource MSSQL -->
     <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean"> 
-        <property name="jndiName" value="java:comp/env/jdbc/MSSQLDB" /> 
+        <property name="jndiName" value="java:comp/env/jdbc/MSSQLDB" /> <!-- MSSQL -->
+        <!-- <property name="jndiName" value="/jdbc/MSSQLDB" /> --> <!-- DB2 -->
     </bean>
     
     <!-- ADD PERSISTENCE SUPPORT HERE (jpa, hibernate, etc) -->

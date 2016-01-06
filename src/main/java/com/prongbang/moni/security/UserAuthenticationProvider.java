@@ -28,6 +28,15 @@ public class UserAuthenticationProvider implements UserDetailsService, Authentic
         final String username = authentication.getName();
         final String password = authentication.getCredentials().toString();
         
+        
+//         User user = userDao.findByLoginAndPassword(loginname, password);
+//             if (user == null) {
+//                    throw new BadCredentialsException("user not found");
+//             }
+//             List<GrantedAuthority> grantedAuths = new ArrayList<>();
+//             grantedAuths.add(new SimpleGrantedAuthority("ROLE_USER"));
+//             Authentication auth=new UsernamePasswordAuthenticationToken(loginname,password,grantedAuths);
+//             return auth;
         // TODO
         
         System.out.println(username + " " + password);

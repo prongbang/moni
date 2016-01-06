@@ -5,8 +5,7 @@
         auth="Container" 
         driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" 
         name="jdbc/MSSQLDB" 
-        type="javax.sql.DataSource"
+        type="javax.sql.DataSource" 
         url="jdbc:sqlserver://localhost:1433;databaseName=spring;user=sa;password=p@ssword"/>
-        
-</Context>
 
+</Context>
