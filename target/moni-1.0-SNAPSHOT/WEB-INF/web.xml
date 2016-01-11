@@ -53,6 +53,7 @@
         <welcome-file>/</welcome-file>
     </welcome-file-list>
     
+    <!-- Error -->
     <error-page>
         <error-code>403</error-code>
         <location>/403</location>

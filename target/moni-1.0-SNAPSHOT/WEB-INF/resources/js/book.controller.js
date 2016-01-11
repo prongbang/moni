@@ -6,13 +6,13 @@ moni.controller("bookController", function ($scope, $http) {
     $scope.id = null;
     $scope.name = null;
     $scope.price = null;
-    $scope.books = []; 
+    $scope.books = [];
 
     $scope.init = function () {
         $('#books').DataTable();
         me.id = $("#id")[0];
         me.name = $("#name")[0];
-        me.price = $("#price")[0]; 
+        me.price = $("#price")[0];
     };
     $scope.init();
 
@@ -27,14 +27,14 @@ moni.controller("bookController", function ($scope, $http) {
                 price: parseFloat($(me.price).val())
             };
 
-            $http.post("./add", data).success(function (response) { 
+            $http.post("./add", data).success(function (response) {
                 if (response.result == 1) {
                     $scope.reset();
                     $scope.reload();
                 }
             });
         }
-        
+
     };
 
     $scope.reset = function () {
@@ -43,7 +43,7 @@ moni.controller("bookController", function ($scope, $http) {
         $(me.price).val("");
     };
 
-    $scope.reload = function(){
+    $scope.reload = function () {
         window.location.reload();
     };
 

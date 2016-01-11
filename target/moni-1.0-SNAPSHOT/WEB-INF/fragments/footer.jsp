@@ -1,3 +1,3 @@
-<footer>
-    <h1 style="text-align: center;">Footer</h1>
+<footer class="pagefooter">
+    <p style="text-align: center;">Footer</p>
 </footer>

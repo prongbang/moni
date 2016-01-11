@@ -35,6 +35,7 @@ public class UserAuthenticationSuccessHandler implements AuthenticationSuccessHa
         SecurityContext securityContext = SecurityContextHolder.getContext();
         Authentication authen = securityContext.getAuthentication();
         
+        System.out.println(authen.getPrincipal());
         
         String targetUrl = "/home";
 

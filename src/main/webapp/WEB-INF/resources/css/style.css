@@ -31,3 +31,10 @@ body{
     -moz-border-radius: 2px;
     border: 1px solid #000;
 }
+
+.pagefooter {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+}

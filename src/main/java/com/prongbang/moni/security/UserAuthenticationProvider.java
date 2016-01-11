@@ -37,7 +37,6 @@ public class UserAuthenticationProvider implements UserDetailsService, Authentic
 //             grantedAuths.add(new SimpleGrantedAuthority("ROLE_USER"));
 //             Authentication auth=new UsernamePasswordAuthenticationToken(loginname,password,grantedAuths);
 //             return auth;
-        // TODO
         
         System.out.println(username + " " + password);
         

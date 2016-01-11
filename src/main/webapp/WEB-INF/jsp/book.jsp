@@ -62,6 +62,7 @@
                                 <form action="./delete" method="post">
                                     <input type="hidden" name="id" value="${b.id}" />
                                     <button type="submit" class="btn btn-danger" onclick="return confirm('Delete ?')">Delete</button>
+                                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                                 </form>
                             </td>
                         </tr>
