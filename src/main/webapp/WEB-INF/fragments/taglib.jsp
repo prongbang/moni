@@ -38,3 +38,4 @@
 
 <!-- App moni -->
 <script type="text/javascript" src="${baseURL}/resources/js/angular.app.js"></script>
+<script type="text/javascript">var BASEURL = '${baseURL}';</script>

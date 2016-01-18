@@ -1,4 +1,4 @@
-
+// @Controller
 moni.controller("bookController", function ($scope, $http) {
 
     var me = this;
@@ -27,7 +27,7 @@ moni.controller("bookController", function ($scope, $http) {
                 price: parseFloat($(me.price).val())
             };
 
-            $http.post("./add", data).success(function (response) {
+            $http.post(BASEURL + "/book/add", data).success(function (response) {
                 if (response.result == 1) {
                     $scope.reset();
                     $scope.reload();

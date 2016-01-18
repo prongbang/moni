@@ -53,11 +53,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
+        // Web 
         http.authorizeRequests()
                 .antMatchers("/login*").permitAll()
                 .antMatchers("/home*").access("isAuthenticated()")
-                .antMatchers("/book*").access("isAuthenticated()")
-                //.antMatchers("/book*").access("isAuthenticated() and hasAnyRole('ADMIN', 'USER')")
+                .antMatchers("/book*").access("isAuthenticated() and hasAnyRole('ROLE_ADMIN', 'ROLE_USER')")
                 .and()
                 .formLogin().loginPage("/login")
                 .successHandler(new UserAuthenticationSuccessHandler())
@@ -76,6 +76,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .csrf();
         // http.csrf().disable(); // use ajax not send csrf
+        
+        // Webservice
+//        http.authorizeRequests()
+//                .antMatchers("/service/login").permitAll()
+//                .antMatchers("/service*").access("isAuthenticated()")
+//                .and()
+//                .addFilter(new AuthenticationFilter())
+//                .csrf().disable();
     }
 
 }

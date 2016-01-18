@@ -21,7 +21,7 @@
         <jsp:include page="/WEB-INF/fragments/header.jsp"/>
         <div class="container" ng-controller="bookController">
             <h1>Book Manager</h1> 
-            <table class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <table class="table" cellspacing="0" width="100%">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -43,7 +43,8 @@
                     </tr>
                 </tbody>
             </table>
-            <table id="books" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <hr/>
+            <table id="books" class="table" cellspacing="0" width="100%">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -61,7 +62,7 @@
                             <td>
                                 <form action="./delete" method="post">
                                     <input type="hidden" name="id" value="${b.id}" />
-                                    <button type="submit" class="btn btn-danger" onclick="return confirm('Delete ?')">Delete</button>
+                                    <button type="submit" class="btn" onclick="return confirm('Delete ?')" title="Delete">X</button>
                                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                                 </form>
                             </td>

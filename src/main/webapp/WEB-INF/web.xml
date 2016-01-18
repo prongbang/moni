@@ -29,6 +29,14 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping> 
     
+    <!-- Spring Security Filter -->
+    <!--
+    <filter>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    -->
+    
     <!-- Character Setting -->
     <filter>
         <filter-name>charsetFilter</filter-name>

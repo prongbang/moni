@@ -29,15 +29,16 @@ public class UserAuthenticationSuccessHandler implements AuthenticationSuccessHa
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
 
         HttpSession session = request.getSession();
-
-        // TODO
-        // Get User
+        
+        session.setMaxInactiveInterval(30*60); // in seconds
+        
         SecurityContext securityContext = SecurityContextHolder.getContext();
-        Authentication authen = securityContext.getAuthentication();
+        Authentication authen = securityContext.getAuthentication(); 
         
-        System.out.println(authen.getPrincipal());
-        
-        String targetUrl = "/home";
+        String targetUrl = "/login";
+        if(authen.getPrincipal() != null) {
+            targetUrl = "/home";
+        }
 
         redirectStrategy.sendRedirect(request, response, targetUrl);
 
