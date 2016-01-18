@@ -17,7 +17,7 @@ moni/src/main/webapp/WEB-INF/sql/mysql.sql<br/>
 <h2>MSSQL Script</h2>
 moni/src/main/webapp/WEB-INF/sql/mssql.sql<br/>
 
-<h2>Change package in XML</h2>
+<h2>Change package and add persistence in XML</h2>
 moni/src/main/webapp/WEB-INF/applicationContext.xml<br/>
 moni/src/main/webapp/WEB-INF/dispatcher-servlet.xml<br/>
 
